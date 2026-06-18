@@ -7,14 +7,14 @@ Use Logos when the user wants help making sense of messy input, finding the real
 Always begin with Logos Core:
 
 ```text
-skills/logos-core/SKILL.md
+core/SKILL.md
 ```
 
 Then add one subordinate skill when needed:
 
-- Use `skills/capsa-consulting/SKILL.md` for consulting, client operations, software/process gaps, ERP issues, dashboards, executive reviews, and accountability.
-- Use `skills/writing-thought-leadership/SKILL.md` for LinkedIn posts, essays, talks, memos, article outlines, and POV development.
-- Use `skills/systems-builder/SKILL.md` for workflows, operating models, checklists, rhythms, ownership maps, and repeatable systems.
+- Use `overlays/capsa-consulting/SKILL.md` for consulting, client operations, software/process gaps, ERP issues, dashboards, executive reviews, and accountability.
+- Use `overlays/writing-thought-leadership/SKILL.md` for LinkedIn posts, essays, talks, memos, article outlines, and POV development.
+- Use `overlays/systems-builder/SKILL.md` for workflows, operating models, checklists, rhythms, ownership maps, and repeatable systems.
 
 Do not skip Logos Core. The subordinate skills extend the core loop; they do not replace it.
 

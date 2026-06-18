@@ -35,50 +35,50 @@ Preserve these lines as working principles:
 ```text
 logos-skill/
   README.md
-  AGENTS.md
-  CLAUDE.md
-  OPENCLAW.md
-  CHATGPT.md
-  skills/
-    logos-core/
-      SKILL.md
-      examples.md
-      test_inputs.md
+  core/
+    SKILL.md
+    examples.md
+  overlays/
     capsa-consulting/
       SKILL.md
       examples.md
-      templates.md
     writing-thought-leadership/
       SKILL.md
       examples.md
     systems-builder/
       SKILL.md
       examples.md
+  templates/
+    capsa-consulting.md
+  evals/
+    logos-core-test-inputs.md
+  adapters/
+    codex/
+    claude-code/
+    openclaw/
 ```
 
 ## How To Use
 
-Start with `skills/logos-core/SKILL.md` for any task that involves messy input, unclear decisions, operational tension, leadership alignment, recurring issues, or turning insight into action.
+Start with `core/SKILL.md` for any task that involves messy input, unclear decisions, operational tension, leadership alignment, recurring issues, or turning insight into action.
 
 Add a subordinate skill only when the user asks for a specific domain output:
 
-- Use `capsa-consulting` for client operations, software/process gaps, executive alignment, and consulting artifacts.
-- Use `writing-thought-leadership` for essays, posts, talks, and executive POV writing.
-- Use `systems-builder` for workflows, operating rhythms, ownership models, and reusable management systems.
+- Use `overlays/capsa-consulting` for client operations, software/process gaps, executive alignment, and consulting artifacts.
+- Use `overlays/writing-thought-leadership` for essays, posts, talks, and executive POV writing.
+- Use `overlays/systems-builder` for workflows, operating rhythms, ownership models, and reusable management systems.
+
+Reusable forms live in `templates/`. Evaluation prompts live in `evals/`. Runtime-specific install guidance lives in `adapters/`.
 
 ## Install For Codex
 
-Codex discovers user skills from the local Codex skills directory. A cloned copy of this repository will not show up automatically unless the individual skill folders are installed there.
+Codex discovers user skills from the local Codex skills directory. A cloned copy of this repository will not show up automatically unless the skill folders are installed there.
 
 On Windows PowerShell:
 
 ```powershell
 $repo = "C:\path\to\logos-skill"
-$skills = "$env:USERPROFILE\.codex\skills"
-Copy-Item "$repo\skills\logos-core" "$skills\logos-core" -Recurse
-Copy-Item "$repo\skills\capsa-consulting" "$skills\capsa-consulting" -Recurse
-Copy-Item "$repo\skills\writing-thought-leadership" "$skills\writing-thought-leadership" -Recurse
-Copy-Item "$repo\skills\systems-builder" "$skills\systems-builder" -Recurse
+& "$repo\adapters\codex\install.ps1" -RepoPath $repo
 ```
 
 After installing, start a new Codex thread or refresh the app session so the skill list is rebuilt.
@@ -92,19 +92,19 @@ Expected skill names:
 
 ## Use With Claude Code
 
-Claude Code can use repository instruction files. Keep `CLAUDE.md` at the repository root. It points Claude to `AGENTS.md` and `skills/logos-core/SKILL.md`, then routes to subordinate skills as needed.
+Claude Code can use repository instruction files. Use `adapters/claude-code/CLAUDE.md` as the Claude Code project instruction file. It points Claude to `core/SKILL.md`, then routes to overlays as needed.
 
 ## Use With OpenClaw
 
-OpenClaw-style skill systems can install each folder under `skills/` as a separate skill because every skill has its own `SKILL.md`.
+OpenClaw-style skill systems can install `core/` and each folder under `overlays/` as separate skills because each has its own `SKILL.md`.
 
-See `OPENCLAW.md` for routing and safety guidance.
+See `adapters/openclaw/OPENCLAW.md` for routing and safety guidance.
 
 ## Use With ChatGPT Or Agents SDK
 
-Use `CHATGPT.md` as the compact import guide for ChatGPT custom instructions, GPT configuration, or OpenAI Agents SDK projects.
+Use `adapters/codex/CHATGPT.md` as the compact import guide for ChatGPT custom instructions, GPT configuration, or OpenAI Agents SDK projects.
 
-Treat each `SKILL.md` as an instruction module. Load `logos-core` first, then one subordinate skill when the task calls for it.
+Treat each `SKILL.md` as an instruction module. Load `core/SKILL.md` first, then one overlay when the task calls for it.
 
 ## Quality Standard
 

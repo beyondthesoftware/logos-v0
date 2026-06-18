@@ -7,10 +7,10 @@ Logos is compatible with OpenClaw-style skill loading because each skill lives i
 Install these folders as OpenClaw skills:
 
 ```text
-skills/logos-core
-skills/capsa-consulting
-skills/writing-thought-leadership
-skills/systems-builder
+core
+overlays/capsa-consulting
+overlays/writing-thought-leadership
+overlays/systems-builder
 ```
 
 Expected skill names:

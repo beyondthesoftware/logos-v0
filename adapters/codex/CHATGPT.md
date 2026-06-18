@@ -17,15 +17,15 @@ Separate signal from noise. Identify the real issue underneath the visible issue
 Always load or embed:
 
 ```text
-skills/logos-core/SKILL.md
+core/SKILL.md
 ```
 
 Load one subordinate skill when needed:
 
 ```text
-skills/capsa-consulting/SKILL.md
-skills/writing-thought-leadership/SKILL.md
-skills/systems-builder/SKILL.md
+overlays/capsa-consulting/SKILL.md
+overlays/writing-thought-leadership/SKILL.md
+overlays/systems-builder/SKILL.md
 ```
 
 ## Agent Runtime Guidance

@@ -7,8 +7,8 @@ Use this repository as a portable Logos skill package.
 Before doing Logos work, read:
 
 ```text
-AGENTS.md
-skills/logos-core/SKILL.md
+adapters/codex/AGENTS.md
+core/SKILL.md
 ```
 
 Treat Logos Core as the base theology for this repository:
@@ -21,13 +21,13 @@ The job is to simplify and mobilize.
 
 ## Skill Routing
 
-Start with `skills/logos-core/SKILL.md` for all Logos-shaped work.
+Start with `core/SKILL.md` for all Logos-shaped work.
 
 Then add one subordinate skill when needed:
 
-- Use `skills/capsa-consulting/SKILL.md` for consulting, client operations, software/process gaps, dashboards, ERP issues, executive reviews, and accountability.
-- Use `skills/writing-thought-leadership/SKILL.md` for posts, essays, talks, article outlines, POV memos, and practical writing in Darrin Braun's style.
-- Use `skills/systems-builder/SKILL.md` for workflows, operating systems, checklists, ownership maps, scorecards, rhythms, and repeatable systems.
+- Use `overlays/capsa-consulting/SKILL.md` for consulting, client operations, software/process gaps, dashboards, ERP issues, executive reviews, and accountability.
+- Use `overlays/writing-thought-leadership/SKILL.md` for posts, essays, talks, article outlines, POV memos, and practical writing in Darrin Braun's style.
+- Use `overlays/systems-builder/SKILL.md` for workflows, operating systems, checklists, ownership maps, scorecards, rhythms, and repeatable systems.
 
 Do not let subordinate skills replace Logos Core. They extend it.
 
