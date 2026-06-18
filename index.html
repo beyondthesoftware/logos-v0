@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Logos is a portable agent skill package that turns messy input into clear action.">
+    <title>Logos | Simplify and Mobilize</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar" aria-label="Primary">
+        <a class="brand-mark" href="#top" aria-label="Logos home">
+          <span class="brand-symbol">L</span>
+          <span>Logos</span>
+        </a>
+        <nav class="nav-links" aria-label="Site sections">
+          <a href="#loop">Loop</a>
+          <a href="#adapters">Adapters</a>
+          <a href="#install">Install</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-grid" aria-hidden="true">
+            <div class="loop-stage" data-loop-stage>
+              <div class="loop-line loop-line-a"></div>
+              <div class="loop-line loop-line-b"></div>
+              <div class="loop-token token-a"></div>
+              <div class="loop-token token-b"></div>
+              <div class="loop-node node-input">Input</div>
+              <div class="loop-node node-signal">Signal</div>
+              <div class="loop-node node-decision">Decision</div>
+              <div class="loop-node node-action">Action</div>
+              <div class="loop-node node-owner">Owner</div>
+              <div class="loop-node node-review">Review</div>
+              <div class="loop-core">
+                <span>Simplify</span>
+                <strong>Mobilize</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-copy">
+            <p class="eyebrow">Portable agent skill system</p>
+            <h1 id="hero-title">Logos turns messy input into clear action.</h1>
+            <p class="hero-lede">A practical operating layer for agents that need to separate signal from noise, find the real issue, clarify decisions, assign owners, set rhythms, and create reusable artifacts.</p>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button button-primary" href="https://github.com/beyondthesoftware/logos-v0">View repo</a>
+              <a class="button button-quiet" href="#install">Install</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="principles" aria-label="Operating language">
+          <p>Clarity before speed.</p>
+          <p>Right data. Right people. Right time.</p>
+          <p>Think less. Do more.</p>
+        </section>
+
+        <section id="loop" class="section-block" aria-labelledby="loop-title">
+          <div class="section-heading">
+            <p class="eyebrow">The operating loop</p>
+            <h2 id="loop-title">Every useful response should make the next decision easier.</h2>
+          </div>
+          <div class="loop-strip" aria-label="Logos loop steps">
+            <span>Input</span>
+            <span>Signal</span>
+            <span>Pattern</span>
+            <span>Decision</span>
+            <span>Action</span>
+            <span>Owner</span>
+            <span>Rhythm</span>
+            <span>Artifact</span>
+            <span>Review</span>
+          </div>
+          <div class="insight-grid">
+            <article>
+              <h3>Find the real issue</h3>
+              <p>Reports, tools, and dashboards are often symptoms. Logos looks for ownership, rhythm, decision rights, process design, and follow-through.</p>
+            </article>
+            <article>
+              <h3>Move from insight to action</h3>
+              <p>The output is not just a better explanation. It is a next move, an owner, a cadence, and an artifact that carries the work forward.</p>
+            </article>
+            <article>
+              <h3>Write like an operator</h3>
+              <p>Plain English. Short sentences. Practical language. Less theatre, more movement.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="adapters" class="section-block split-section" aria-labelledby="adapter-title">
+          <div class="section-heading">
+            <p class="eyebrow">Use it where the work happens</p>
+            <h2 id="adapter-title">One core. Focused adapters.</h2>
+          </div>
+          <div class="adapter-list" aria-label="Supported adapters">
+            <button class="adapter is-active" type="button" data-adapter="Codex">
+              <span>Codex</span>
+              <small>Install as discoverable skills.</small>
+            </button>
+            <button class="adapter" type="button" data-adapter="ChatGPT">
+              <span>ChatGPT</span>
+              <small>Use in custom instructions or GPTs.</small>
+            </button>
+            <button class="adapter" type="button" data-adapter="Claude Code">
+              <span>Claude Code</span>
+              <small>Use as project guidance.</small>
+            </button>
+            <button class="adapter" type="button" data-adapter="OpenClaw">
+              <span>OpenClaw</span>
+              <small>Install as skill folders.</small>
+            </button>
+          </div>
+          <aside class="adapter-panel" aria-live="polite">
+            <p class="panel-kicker">Selected adapter</p>
+            <h3 data-adapter-title>Codex</h3>
+            <p data-adapter-copy>Run the Codex installer from the repo root. Logos appears as four skills: core plus three overlays.</p>
+            <code data-adapter-code>.\adapters\codex\install.ps1</code>
+          </aside>
+        </section>
+
+        <section id="install" class="section-block install-section" aria-labelledby="install-title">
+          <div class="section-heading">
+            <p class="eyebrow">Start clean</p>
+            <h2 id="install-title">Clone it. Install the adapter. Test the loop.</h2>
+          </div>
+          <div class="terminal-card" aria-label="Installation commands">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <pre><code>git clone https://github.com/beyondthesoftware/logos-v0.git
+cd logos-v0
+.\adapters\codex\install.ps1</code></pre>
+          </div>
+          <p class="install-note">No app. No database. No authentication. Logos is instruction infrastructure first.</p>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>The software exposes the gap. The process explains the gap. Leadership owns the gap.</p>
+        <a href="https://github.com/beyondthesoftware/logos-v0">GitHub</a>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
