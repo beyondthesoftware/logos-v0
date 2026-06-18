@@ -34,6 +34,9 @@ Preserve these lines as working principles:
 logos-skill/
   README.md
   AGENTS.md
+  CLAUDE.md
+  OPENCLAW.md
+  CHATGPT.md
   skills/
     logos-core/
       SKILL.md
@@ -84,6 +87,22 @@ Expected skill names:
 - `$capsa-consulting`
 - `$writing-thought-leadership`
 - `$systems-builder`
+
+## Use With Claude Code
+
+Claude Code can use repository instruction files. Keep `CLAUDE.md` at the repository root. It points Claude to `AGENTS.md` and `skills/logos-core/SKILL.md`, then routes to subordinate skills as needed.
+
+## Use With OpenClaw
+
+OpenClaw-style skill systems can install each folder under `skills/` as a separate skill because every skill has its own `SKILL.md`.
+
+See `OPENCLAW.md` for routing and safety guidance.
+
+## Use With ChatGPT Or Agents SDK
+
+Use `CHATGPT.md` as the compact import guide for ChatGPT custom instructions, GPT configuration, or OpenAI Agents SDK projects.
+
+Treat each `SKILL.md` as an instruction module. Load `logos-core` first, then one subordinate skill when the task calls for it.
 
 ## Quality Standard
 
