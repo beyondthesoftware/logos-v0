@@ -10,7 +10,7 @@ const adapterData = {
   Custom GPT: {
     copy: "Click the link, start chatting. Yep, it's that simple.",
     code: "https://chatgpt.com/g/g-6a3411f523c88191a40133cdf16132e1-logos"
-  }
+  },
   "Claude Code": {
     copy: "Copy the Claude adapter into a project as CLAUDE.md so Claude starts with Logos before it works.",
     code: "adapters/claude-code/CLAUDE.md"
