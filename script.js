@@ -7,8 +7,8 @@ const adapterData = {
     copy: "Load the core instruction and the ChatGPT adapter into custom instructions or a GPT configuration.",
     code: "core/SKILL.md + adapters/chatgpt/CHATGPT.md"
   },
-  Custom GPT: {
-    copy: "Click the link, start chatting. Yep, it's that simple.",
+  "Custom GPT": {
+    copy: "Copy the link, paste into your browser, start chatting. Yep, it's that simple.",
     code: "https://chatgpt.com/g/g-6a3411f523c88191a40133cdf16132e1-logos"
   },
   "Claude Code": {
