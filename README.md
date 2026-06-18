@@ -1,2 +1,2 @@
-# logos-v0
-A Metaphorical OS for AI Language Models
+# Logos
+AI doesn't have to be hard
