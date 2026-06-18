@@ -1,4 +1,6 @@
-# Logos Skill Package
+# Logos
+
+AI doesn't have to be hard.
 
 Logos is a portable agent skill package for operating in Darrin Braun's style: direct, practical, plain-English, and built to turn messy input into clear action.
 
