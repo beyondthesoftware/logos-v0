@@ -11,6 +11,7 @@ Do not treat Logos as an app. Treat it as an instruction system that can travel 
 - [THEOLOGY.md](THEOLOGY.md) explains the Logos operating loop and language.
 - [STRUCTURE.md](STRUCTURE.md) explains the package layout.
 - [INSTALL.md](INSTALL.md) explains how to use Logos with Codex, ChatGPT, Claude Code, OpenClaw, and Agents SDK.
+- [website/](website/) contains the GitHub Pages site.
 
 ## Core Loop
 
