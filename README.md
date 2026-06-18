@@ -54,6 +54,7 @@ logos-skill/
     logos-core-test-inputs.md
   adapters/
     codex/
+    chatgpt/
     claude-code/
     openclaw/
 ```
@@ -100,11 +101,15 @@ OpenClaw-style skill systems can install `core/` and each folder under `overlays
 
 See `adapters/openclaw/OPENCLAW.md` for routing and safety guidance.
 
-## Use With ChatGPT Or Agents SDK
+## Use With ChatGPT
 
-Use `adapters/codex/CHATGPT.md` as the compact import guide for ChatGPT custom instructions, GPT configuration, or OpenAI Agents SDK projects.
+Use `adapters/chatgpt/CHATGPT.md` as the compact import guide for ChatGPT custom instructions or GPT configuration.
 
 Treat each `SKILL.md` as an instruction module. Load `core/SKILL.md` first, then one overlay when the task calls for it.
+
+## Use With Agents SDK
+
+Agents SDK projects can use the same instruction modules directly. Load `core/SKILL.md` as the base instruction, then add one overlay when the agent's job requires it.
 
 ## Quality Standard
 

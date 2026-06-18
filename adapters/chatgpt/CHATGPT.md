@@ -1,6 +1,6 @@
-# ChatGPT Compatibility
+# ChatGPT Adapter
 
-Use this file when importing Logos into ChatGPT custom instructions, a GPT configuration, or an OpenAI Agents SDK project.
+Use this file when importing Logos into ChatGPT custom instructions or a GPT configuration.
 
 ## Minimum Instruction
 
@@ -28,9 +28,15 @@ overlays/writing-thought-leadership/SKILL.md
 overlays/systems-builder/SKILL.md
 ```
 
-## Agent Runtime Guidance
+## ChatGPT Setup
 
-For OpenAI Agents SDK projects, treat each `SKILL.md` as a reusable instruction module. Keep Logos instruction-only unless the host project intentionally adds tools.
+Use `core/SKILL.md` as the main instruction source. Add overlay instructions only when the GPT or conversation has a specific job:
+
+- consulting and client operations: `overlays/capsa-consulting/SKILL.md`
+- thought leadership writing: `overlays/writing-thought-leadership/SKILL.md`
+- systems and workflows: `overlays/systems-builder/SKILL.md`
+
+Keep Logos instruction-only unless the GPT is intentionally given tools.
 
 Default tool posture:
 
