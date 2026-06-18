@@ -1,0 +1,7 @@
+interface:
+  display_name: "Logos Core"
+  short_description: "Turn messy input into clear action"
+  default_prompt: "Use $logos-core to separate signal from noise, identify the real issue, and turn it into action."
+
+policy:
+  allow_implicit_invocation: true

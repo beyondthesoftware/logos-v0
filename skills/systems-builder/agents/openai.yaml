@@ -1,0 +1,7 @@
+interface:
+  display_name: "Systems Builder"
+  short_description: "Build lightweight operating systems"
+  default_prompt: "Use $systems-builder to turn this recurring problem into a simple owned rhythm and reusable artifact."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Capsa Consulting"
+  short_description: "Diagnose client operating gaps"
+  default_prompt: "Use $capsa-consulting to turn this client issue into a clear operating diagnosis and next-step artifact."
+
+policy:
+  allow_implicit_invocation: true

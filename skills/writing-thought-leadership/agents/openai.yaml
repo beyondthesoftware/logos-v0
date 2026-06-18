@@ -1,0 +1,7 @@
+interface:
+  display_name: "Writing Thought Leadership"
+  short_description: "Turn insight into plain-English POVs"
+  default_prompt: "Use $writing-thought-leadership to turn this operational insight into a clear practical post or POV."
+
+policy:
+  allow_implicit_invocation: true
