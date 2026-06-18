@@ -61,6 +61,30 @@ Add a subordinate skill only when the user asks for a specific domain output:
 - Use `writing-thought-leadership` for essays, posts, talks, and executive POV writing.
 - Use `systems-builder` for workflows, operating rhythms, ownership models, and reusable management systems.
 
+## Install For Codex
+
+Codex discovers user skills from the local Codex skills directory. A cloned copy of this repository will not show up automatically unless the individual skill folders are installed there.
+
+On Windows PowerShell:
+
+```powershell
+$repo = "C:\path\to\logos-skill"
+$skills = "$env:USERPROFILE\.codex\skills"
+Copy-Item "$repo\skills\logos-core" "$skills\logos-core" -Recurse
+Copy-Item "$repo\skills\capsa-consulting" "$skills\capsa-consulting" -Recurse
+Copy-Item "$repo\skills\writing-thought-leadership" "$skills\writing-thought-leadership" -Recurse
+Copy-Item "$repo\skills\systems-builder" "$skills\systems-builder" -Recurse
+```
+
+After installing, start a new Codex thread or refresh the app session so the skill list is rebuilt.
+
+Expected skill names:
+
+- `$logos-core`
+- `$capsa-consulting`
+- `$writing-thought-leadership`
+- `$systems-builder`
+
 ## Quality Standard
 
 A good Logos response should:
