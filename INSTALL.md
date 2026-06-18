@@ -1,54 +1,160 @@
 # Installation
 
-Use the adapter that matches the agent runtime.
+Logos is a portable instruction package. You do not need to run a server, create a database, or connect an external service.
+
+Pick the agent you want to use, then follow that section.
+
+## Get Logos
+
+Clone or download the repository:
+
+```powershell
+git clone https://github.com/beyondthesoftware/logos-v0.git
+cd logos-v0
+```
+
+If you do not use Git, download the repository as a ZIP from GitHub and unzip it somewhere you can find later.
 
 ## Codex
 
-Codex discovers user skills from the local Codex skills directory. A cloned copy of this repository will not show up automatically unless the skill folders are installed there.
+Use this path if you want Logos to appear as skills inside Codex.
 
-On Windows PowerShell:
+### Install
+
+On Windows PowerShell, from inside the downloaded `logos-v0` folder:
 
 ```powershell
-$repo = "C:\path\to\logos-skill"
-& "$repo\adapters\codex\install.ps1" -RepoPath $repo
+.\adapters\codex\install.ps1
 ```
 
-After installing, start a new Codex thread or refresh the app session so the skill list is rebuilt.
+If PowerShell blocks the script, run:
 
-Expected skill names:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\adapters\codex\install.ps1
+```
+
+The installer copies the Logos skills into your local Codex skills folder:
+
+```text
+%USERPROFILE%\.codex\skills
+```
+
+### Confirm
+
+Restart Codex or start a new Codex thread. You should be able to use:
 
 - `$logos-core`
 - `$capsa-consulting`
 - `$writing-thought-leadership`
 - `$systems-builder`
 
+Test prompt:
+
+```text
+Use $logos-core to analyze this:
+Our reports are everywhere, but decisions still happen late.
+```
+
 ## ChatGPT
 
-Use `adapters/chatgpt/CHATGPT.md` as the compact import guide for ChatGPT custom instructions or GPT configuration.
+Use this path for ChatGPT custom instructions or a custom GPT.
 
-Load `core/SKILL.md` first. Add one overlay only when the GPT or conversation has a specific job.
+### Minimum Setup
+
+Copy the contents of these files into your ChatGPT instructions or GPT knowledge/instructions:
+
+```text
+core/SKILL.md
+adapters/chatgpt/CHATGPT.md
+```
+
+Add one overlay only if the GPT has a specific job:
+
+- consulting and client operations: `overlays/capsa-consulting/SKILL.md`
+- thought leadership writing: `overlays/writing-thought-leadership/SKILL.md`
+- systems and workflows: `overlays/systems-builder/SKILL.md`
+
+### Confirm
+
+Test with:
+
+```text
+Use Logos to turn this into Signal, Pattern, Real issue, Decision, Action, Owner, Rhythm, Artifact, and Review:
+Our team tracks metrics every week, but behavior is not changing.
+```
 
 ## Claude Code
 
-Use `adapters/claude-code/CLAUDE.md` as the Claude Code project instruction file.
+Use this path if you want Claude Code to follow Logos while working in a repository.
 
-It points Claude to `core/SKILL.md`, then routes to overlays as needed.
+Copy:
+
+```text
+adapters/claude-code/CLAUDE.md
+```
+
+Into the root of the target project as:
+
+```text
+CLAUDE.md
+```
+
+Keep the Logos repository available so Claude can read:
+
+```text
+core/SKILL.md
+overlays/
+templates/
+evals/
+```
 
 ## OpenClaw
 
-OpenClaw-style skill systems can install `core/` and each folder under `overlays/` as separate skills because each has its own `SKILL.md`.
+Use this path for OpenClaw-style skill folders.
 
-Use:
+Run the installer and point it at your OpenClaw skills directory:
 
 ```powershell
-$repo = "C:\path\to\logos-skill"
-& "$repo\adapters\openclaw\install.ps1" -RepoPath $repo -OpenClawSkillsPath "C:\path\to\openclaw\skills"
+.\adapters\openclaw\install.ps1 -OpenClawSkillsPath "C:\path\to\openclaw\skills"
 ```
+
+The installer copies these skills:
+
+- `logos-core`
+- `capsa-consulting`
+- `writing-thought-leadership`
+- `systems-builder`
 
 See `adapters/openclaw/OPENCLAW.md` for routing and safety guidance.
 
-## Agents SDK
+## OpenAI Agents SDK
 
-Agents SDK projects can use the same instruction modules directly.
+Use Logos as instruction modules.
 
-Load `core/SKILL.md` as the base instruction. Add one overlay when the agent's job requires it.
+Start with:
+
+```text
+core/SKILL.md
+```
+
+Then add one overlay only when the agent's job requires it:
+
+- `overlays/capsa-consulting/SKILL.md`
+- `overlays/writing-thought-leadership/SKILL.md`
+- `overlays/systems-builder/SKILL.md`
+
+Keep Logos instruction-only unless your agent intentionally needs tools.
+
+## Troubleshooting
+
+If the skill does not appear in Codex, restart Codex or start a new thread.
+
+If PowerShell blocks the install script, use the `-ExecutionPolicy Bypass` command shown above.
+
+If you downloaded a ZIP, make sure `$repo` or your terminal is pointed at the unzipped `logos-v0` folder, not the parent downloads folder.
+
+If an agent gives a generic answer, load `core/SKILL.md` first and ask for the full Logos loop:
+
+```text
+Signal, Pattern, Real issue, Decision, Action, Owner, Rhythm, Artifact, Review
+```
